@@ -4,12 +4,11 @@
 # Installation
 
 ```bash
-git clone https://github.com/wikit-ai/olaf-llm-eswc2024
-cd olaf-llm-eswc2024
+git clone https://github.com/ba-talibe/olaf-demonstrators
+cd olaf-demonstrators
 python3 -m venv ./venv
 source venv/bin/activate
 pip install -r requirements.txt
-```path/to/your/local/obo/robot/cli/tool/folder/robot.jar
 ```
 
 # Data
