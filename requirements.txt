@@ -1,0 +1,10 @@
+matplotlib==3.8.2
+nbformat==5.9.2
+openai==1.11.1
+pandas==2.1.2
+plotly==5.18.0
+python-dotenv==1.0.1
+sentence-transformers==3.0.1
+transformers==4.35.0
+olaf @ git+https://github.com/wikit-ai/olaf.git
+en-core-web-lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.1/en_core_web_lg-3.7.1-py3-none-any.whl#sha256=ab70aeb6172cde82508f7739f35ebc9918a3d07debeed637403c8f794ba3d3dc
