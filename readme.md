@@ -18,7 +18,8 @@ The text used to learn the ontology is created based on default documentation fo
 
 
 # Notebooks
-
+In this folowing notebooks concepts, relations, metarelation components 
+are assessed on the basis of a hand-created ground truth (GC10-DET_doc_annotated).
 - concept_extraction_evaluation.ipynb 
 - relation_extraction_evaluation.ipynb 
 - metarelation_extraction_evaluation.ipynb 
