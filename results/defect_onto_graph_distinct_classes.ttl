@@ -1,0 +1,799 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAbnormal
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAbnormal> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:domain <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Crease> ;
+                                                                      rdfs:range <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Spacing> ;
+                                                                      rdfs:label "has abnormal" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAppearance
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAppearance> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:domain <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Crease> ,
+                                                                                    <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Inclusion> ,
+                                                                                    <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#OilSpot> ,
+                                                                                    <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RolledPit> ,
+                                                                                    <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SilkSpot> ,
+                                                                                    <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WaistFolding> ;
+                                                                        rdfs:range <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#BlockIrregularDistribution> ,
+                                                                                   <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Bulges> ,
+                                                                                   <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#FishScaleShape> ,
+                                                                                   <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#ObviousFolds> ,
+                                                                                   <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Pits> ,
+                                                                                   <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Plaque> ,
+                                                                                   <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Product> ,
+                                                                                   <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SmallSpots> ,
+                                                                                   <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#StripShape> ,
+                                                                                   <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#VerticalTransverseFold> ,
+                                                                                   <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Wrinkles> ;
+                                                                        rdfs:label "has appearance" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isAccompaniedBy
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isAccompaniedBy> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:domain <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Inclusion> ;
+                                                                          rdfs:range <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RoughPockmarkedSurfaces> ;
+                                                                          rdfs:label "is accompanied by" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isCausedBy
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isCausedBy> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Contamination> ,
+                                                                                 <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Crease> ,
+                                                                                 <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#CrescentGap> ,
+                                                                                 <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#OilSpot> ,
+                                                                                 <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Punching> ,
+                                                                                 <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RolledPit> ,
+                                                                                 <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SilkSpot> ,
+                                                                                 <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WaistFolding> ;
+                                                                     rdfs:range <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Contamination> ,
+                                                                                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cutting> ,
+                                                                                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LocalDeformation> ,
+                                                                                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LocalYield> ,
+                                                                                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Low-carbon> ,
+                                                                                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MechanicalFailure> ,
+                                                                                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MechanicalLubricant> ,
+                                                                                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#TensionRoll> ,
+                                                                                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UnevenPressure> ,
+                                                                                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UnevenTemperature> ,
+                                                                                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WorkRoll> ;
+                                                                     rdfs:label "is caused by" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isPartOf
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isPartOf> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Crease> ,
+                                                                               <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Inclusion> ,
+                                                                               <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Punctate> ,
+                                                                               <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RolledPit> ,
+                                                                               <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WeldLine> ;
+                                                                   rdfs:range <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LowerSurface> ,
+                                                                              <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RolledPit> ,
+                                                                              <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SteelPlate> ,
+                                                                              <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Strip> ,
+                                                                              <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UpperSurface> ;
+                                                                   rdfs:label "is part of" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isProducedBy
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isProducedBy> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Punching> ,
+                                                                                   <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WaterSpot> ;
+                                                                       rdfs:range <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Drying> ,
+                                                                                  <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Production> ,
+                                                                                  <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#ProductionLine> ,
+                                                                                  <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Strip> ;
+                                                                       rdfs:label "is produced by" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Appearance
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Appearance> rdf:type owl:Class ;
+                                                                     rdfs:label "appearance" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#BlockIrregularDistribution
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#BlockIrregularDistribution> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Inclusion> ;
+                                                                                     rdfs:label "block irregular distribution" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Bulges
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Bulges> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RolledPit> ;
+                                                                 rdfs:label "bulges" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cause
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cause> rdf:type owl:Class ;
+                                                                rdfs:label "cause" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Contamination
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Contamination> rdf:type owl:Class ;
+                                                                        owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isCausedBy> ;
+                                                                                              owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MechanicalLubricant>
+                                                                                            ] ;
+                                                                        rdfs:label "contamination" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Crease
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Crease> rdf:type owl:Class ;
+                                                                 owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAbnormal> ;
+                                                                                       owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Spacing>
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAppearance> ;
+                                                                                       owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#VerticalTransverseFold>
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isCausedBy> ;
+                                                                                       owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LocalYield>
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isPartOf> ;
+                                                                                       owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Strip>
+                                                                                     ] ;
+                                                                 rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#DefectType> ;
+                                                                 rdfs:label "crease" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#CrescentGap
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#CrescentGap> rdf:type owl:Class ;
+                                                                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isCausedBy> ;
+                                                                                            owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cutting>
+                                                                                          ] ;
+                                                                      rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#DefectType> ;
+                                                                      rdfs:label "crescent gap" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cutting
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cutting> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cause> ;
+                                                                  rdfs:label "cutting" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Damage
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Damage> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cause> ;
+                                                                 rdfs:label "damage" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#DefectType
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#DefectType> rdf:type owl:Class ;
+                                                                     rdfs:label "defect type" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Deformation
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Deformation> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Fold> ;
+                                                                      rdfs:label "deformation" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Drying
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Drying> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cause> ;
+                                                                 rdfs:label "drying" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Factory
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Factory> rdf:type owl:Class ;
+                                                                  rdfs:label "factory" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#FishScaleShape
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#FishScaleShape> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Inclusion> ;
+                                                                         rdfs:label "fish scale shape" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Fold
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Fold> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Crease> ,
+                                                                               <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#DefectType> ;
+                                                               rdfs:label "fold" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Inclusion
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Inclusion> rdf:type owl:Class ;
+                                                                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAppearance> ;
+                                                                                          owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#BlockIrregularDistribution>
+                                                                                        ] ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAppearance> ;
+                                                                                          owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#FishScaleShape>
+                                                                                        ] ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAppearance> ;
+                                                                                          owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SmallSpots>
+                                                                                        ] ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAppearance> ;
+                                                                                          owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#StripShape>
+                                                                                        ] ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isAccompaniedBy> ;
+                                                                                          owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RoughPockmarkedSurfaces>
+                                                                                        ] ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isPartOf> ;
+                                                                                          owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LowerSurface>
+                                                                                        ] ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isPartOf> ;
+                                                                                          owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UpperSurface>
+                                                                                        ] ;
+                                                                    rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#DefectType> ;
+                                                                    rdfs:label "inclusion" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LocalDeformation
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LocalDeformation> rdf:type owl:Class ;
+                                                                           rdfs:label "local deformation" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LocalYield
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LocalYield> rdf:type owl:Class ;
+                                                                     rdfs:label "local yield" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Low-carbon
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Low-carbon> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cause> ;
+                                                                     rdfs:label "low-carbon" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LowerSurface
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LowerSurface> rdf:type owl:Class ;
+                                                                       rdfs:label "lower surface" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MechanicalFailure
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MechanicalFailure> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cause> ;
+                                                                            rdfs:label "mechanical failure" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MechanicalLubricant
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MechanicalLubricant> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cause> ;
+                                                                              rdfs:label "mechanical lubricant" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MetalSurface
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MetalSurface> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Product> ;
+                                                                       rdfs:label "metal surface" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#ObviousFolds
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#ObviousFolds> rdf:type owl:Class ;
+                                                                       rdfs:label "obvious folds" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#OilSpot
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#OilSpot> rdf:type owl:Class ;
+                                                                  owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAppearance> ;
+                                                                                        owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Product>
+                                                                                      ] ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isCausedBy> ;
+                                                                                        owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Contamination>
+                                                                                      ] ;
+                                                                  rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#DefectType> ;
+                                                                  rdfs:label "oil spot" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Pits
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Pits> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RolledPit> ;
+                                                               rdfs:label "pits" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Plaque
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Plaque> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SilkSpot> ;
+                                                                 rdfs:label "plaque" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Pressure
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Pressure> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cause> ;
+                                                                   rdfs:label "pressure" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Product
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Product> rdf:type owl:Class ;
+                                                                  rdfs:label "product" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Production
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Production> rdf:type owl:Class ;
+                                                                     rdfs:label "production" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#ProductionLine
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#ProductionLine> rdf:type owl:Class ;
+                                                                         rdfs:label "production line" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Punching
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Punching> rdf:type owl:Class ;
+                                                                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isCausedBy> ;
+                                                                                         owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MechanicalFailure>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isProducedBy> ;
+                                                                                         owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#ProductionLine>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isProducedBy> ;
+                                                                                         owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Strip>
+                                                                                       ] ;
+                                                                   rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#DefectType> ;
+                                                                   rdfs:label "punching" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Punctate
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Punctate> rdf:type owl:Class ;
+                                                                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isPartOf> ;
+                                                                                         owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RolledPit>
+                                                                                       ] ;
+                                                                   rdfs:label "punctate" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RolledPit
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RolledPit> rdf:type owl:Class ;
+                                                                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAppearance> ;
+                                                                                          owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Bulges>
+                                                                                        ] ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAppearance> ;
+                                                                                          owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Pits>
+                                                                                        ] ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isCausedBy> ;
+                                                                                          owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#TensionRoll>
+                                                                                        ] ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isCausedBy> ;
+                                                                                          owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WorkRoll>
+                                                                                        ] ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isPartOf> ;
+                                                                                          owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SteelPlate>
+                                                                                        ] ;
+                                                                    rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#DefectType> ;
+                                                                    rdfs:label "rolled pit" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Roller
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Roller> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Factory> ;
+                                                                 rdfs:label "roller" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RoughPockmarkedSurfaces
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RoughPockmarkedSurfaces> rdf:type owl:Class ;
+                                                                                  rdfs:label "rough pockmarked surfaces" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SilkSpot
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SilkSpot> rdf:type owl:Class ;
+                                                                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAppearance> ;
+                                                                                         owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Plaque>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isCausedBy> ;
+                                                                                         owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UnevenPressure>
+                                                                                       ] ,
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isCausedBy> ;
+                                                                                         owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UnevenTemperature>
+                                                                                       ] ;
+                                                                   rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#DefectType> ;
+                                                                   rdfs:label "silk spot" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SmallSpots
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SmallSpots> rdf:type owl:Class ;
+                                                                     rdfs:label "small spots" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Spacing
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Spacing> rdf:type owl:Class ;
+                                                                  rdfs:label "spacing" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Spots
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Spots> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Inclusion> ;
+                                                                rdfs:label "spots" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SteelPlate
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SteelPlate> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Product> ;
+                                                                     rdfs:label "steel plate" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Strip
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Strip> rdf:type owl:Class ;
+                                                                rdfs:label "strip" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#StripShape
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#StripShape> rdf:type owl:Class ;
+                                                                     rdfs:label "strip shape" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#StripSurface
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#StripSurface> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Product> ;
+                                                                       rdfs:label "strip surface" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#TensionRoll
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#TensionRoll> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Factory> ;
+                                                                      rdfs:label "tension roll" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UncoilingProcess
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UncoilingProcess> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Factory> ;
+                                                                           rdfs:label "uncoiling process" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UnevenPressure
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UnevenPressure> rdf:type owl:Class ;
+                                                                         rdfs:label "uneven pressure" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UnevenTemperature
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UnevenTemperature> rdf:type owl:Class ;
+                                                                            rdfs:label "uneven temperature" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UpperSurface
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UpperSurface> rdf:type owl:Class ;
+                                                                       rdfs:label "upper surface" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#VerticalTransverseFold
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#VerticalTransverseFold> rdf:type owl:Class ;
+                                                                                 rdfs:label "vertical transverse fold" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WaistFolding
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WaistFolding> rdf:type owl:Class ;
+                                                                       owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAppearance> ;
+                                                                                             owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#ObviousFolds>
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAppearance> ;
+                                                                                             owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Wrinkles>
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isCausedBy> ;
+                                                                                             owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LocalDeformation>
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isCausedBy> ;
+                                                                                             owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Low-carbon>
+                                                                                           ] ;
+                                                                       rdfs:label "waist folding" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WaterSpot
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WaterSpot> rdf:type owl:Class ;
+                                                                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isProducedBy> ;
+                                                                                          owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Drying>
+                                                                                        ] ,
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isProducedBy> ;
+                                                                                          owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Production>
+                                                                                        ] ;
+                                                                    rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#DefectType> ;
+                                                                    rdfs:label "water spot" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WeldLine
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WeldLine> rdf:type owl:Class ;
+                                                                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isPartOf> ;
+                                                                                         owl:someValuesFrom <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Strip>
+                                                                                       ] ;
+                                                                   rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#DefectType> ;
+                                                                   rdfs:label "weld line" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WorkRoll
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WorkRoll> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Factory> ;
+                                                                   rdfs:label "work roll" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Wrinkles
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Wrinkles> rdf:type owl:Class ;
+                                                                   rdfs:label "wrinkles" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_blockIrregularDistribution
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_blockIrregularDistribution> rdf:type owl:NamedIndividual ,
+                                                                                               <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#BlockIrregularDistribution> ;
+                                                                                      rdfs:label "block irregular distribution" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_bulges
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_bulges> rdf:type owl:NamedIndividual ,
+                                                                           <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Bulges> ;
+                                                                  rdfs:label "bulges" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_crease
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_crease> rdf:type owl:NamedIndividual ,
+                                                                           <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Crease> ;
+                                                                  rdfs:label "crease" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_crescentGap
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_crescentGap> rdf:type owl:NamedIndividual ,
+                                                                                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#CrescentGap> ;
+                                                                       rdfs:label "crescent gap" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_cutting
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_cutting> rdf:type owl:NamedIndividual ,
+                                                                            <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cutting> ;
+                                                                   rdfs:label "cutting" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_damage
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_damage> rdf:type owl:NamedIndividual ,
+                                                                           <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Damage> ;
+                                                                  rdfs:label "damage" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_defectType
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_defectType> rdf:type owl:NamedIndividual ,
+                                                                               <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#DefectType> ;
+                                                                      rdfs:label "defect type" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_deformation
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_deformation> rdf:type owl:NamedIndividual ,
+                                                                                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Deformation> ;
+                                                                       rdfs:label "deformation" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_drying
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_drying> rdf:type owl:NamedIndividual ,
+                                                                           <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Drying> ;
+                                                                  rdfs:label "drying" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_fishScaleShape
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_fishScaleShape> rdf:type owl:NamedIndividual ,
+                                                                                   <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#FishScaleShape> ;
+                                                                          rdfs:label "fish scale shape" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_fold
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_fold> rdf:type owl:NamedIndividual ,
+                                                                         <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Fold> ;
+                                                                rdfs:label "fold" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_inclusion
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_inclusion> rdf:type owl:NamedIndividual ,
+                                                                              <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Inclusion> ;
+                                                                     rdfs:label "inclusion" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_low-carbon
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_low-carbon> rdf:type owl:NamedIndividual ,
+                                                                               <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Low-carbon> ;
+                                                                      rdfs:label "low-carbon" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_mechanicalFailure
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_mechanicalFailure> rdf:type owl:NamedIndividual ,
+                                                                                      <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MechanicalFailure> ;
+                                                                             rdfs:label "mechanical failure" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_mechanicalLubricant
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_mechanicalLubricant> rdf:type owl:NamedIndividual ,
+                                                                                        <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MechanicalLubricant> ;
+                                                                               rdfs:label "mechanical lubricant" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_metalSurface
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_metalSurface> rdf:type owl:NamedIndividual ,
+                                                                                 <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MetalSurface> ;
+                                                                        rdfs:label "metal surface" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_oilSpot
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_oilSpot> rdf:type owl:NamedIndividual ,
+                                                                            <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#OilSpot> ;
+                                                                   rdfs:label "oil spot" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_pits
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_pits> rdf:type owl:NamedIndividual ,
+                                                                         <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Pits> ;
+                                                                rdfs:label "pits" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_plaque
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_plaque> rdf:type owl:NamedIndividual ,
+                                                                           <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Plaque> ;
+                                                                  rdfs:label "plaque" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_pressure
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_pressure> rdf:type owl:NamedIndividual ,
+                                                                             <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Pressure> ;
+                                                                    rdfs:label "pressure" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_punching
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_punching> rdf:type owl:NamedIndividual ,
+                                                                             <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Punching> ;
+                                                                    rdfs:label "punching" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_rolledPit
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_rolledPit> rdf:type owl:NamedIndividual ,
+                                                                              <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RolledPit> ;
+                                                                     rdfs:label "rolled pit" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_roller
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_roller> rdf:type owl:NamedIndividual ,
+                                                                           <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Roller> ;
+                                                                  rdfs:label "roller" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_silkSpot
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_silkSpot> rdf:type owl:NamedIndividual ,
+                                                                             <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SilkSpot> ;
+                                                                    rdfs:label "silk spot" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_spots
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_spots> rdf:type owl:NamedIndividual ,
+                                                                          <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Spots> ;
+                                                                 rdfs:label "spots" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_steelPlate
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_steelPlate> rdf:type owl:NamedIndividual ,
+                                                                               <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SteelPlate> ;
+                                                                      rdfs:label "steel plate" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_steelStripSurface
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_steelStripSurface> rdf:type owl:NamedIndividual ,
+                                                                                      <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#StripSurface> ;
+                                                                             rdfs:label "steel strip surface" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_stripSurface
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_stripSurface> rdf:type owl:NamedIndividual ,
+                                                                                 <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#StripSurface> ;
+                                                                        rdfs:label "strip surface" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_tensionRoll
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_tensionRoll> rdf:type owl:NamedIndividual ,
+                                                                                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#TensionRoll> ;
+                                                                       rdfs:label "tension roll" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_uncoilingProcess
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_uncoilingProcess> rdf:type owl:NamedIndividual ,
+                                                                                     <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UncoilingProcess> ;
+                                                                            rdfs:label "uncoiling process" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_waistFolding
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_waistFolding> rdf:type owl:NamedIndividual ,
+                                                                                 <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WaistFolding> ;
+                                                                        rdfs:label "waist folding" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_waterSpot
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_waterSpot> rdf:type owl:NamedIndividual ,
+                                                                              <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WaterSpot> ;
+                                                                     rdfs:label "water spot" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_weldLine
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_weldLine> rdf:type owl:NamedIndividual ,
+                                                                             <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WeldLine> ;
+                                                                    rdfs:label "weld line" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_weldingLine
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_weldingLine> rdf:type owl:NamedIndividual ,
+                                                                                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WeldLine> ;
+                                                                       rdfs:label "welding line" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_workRoll
+<https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_workRoll> rdf:type owl:NamedIndividual ,
+                                                                             <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WorkRoll> ;
+                                                                    rdfs:label "work roll" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Appearance>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#BlockIrregularDistribution>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Bulges>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#CrescentGap>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cutting>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Damage>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Deformation>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Drying>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#FishScaleShape>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Low-carbon>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MechanicalFailure>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MechanicalLubricant>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MetalSurface>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#OilSpot>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Pits>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Plaque>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Pressure>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Punching>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Roller>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Spots>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SteelPlate>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#StripSurface>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#TensionRoll>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UncoilingProcess>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WaistFolding>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WaterSpot>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WeldLine>
+                <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WorkRoll>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

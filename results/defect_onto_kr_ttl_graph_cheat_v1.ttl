@@ -1,0 +1,600 @@
+@prefix ns1: <https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAbnormal
+ns1:hasAbnormal rdf:type owl:ObjectProperty ;
+                rdfs:domain ns1:Crease ;
+                rdfs:range ns1:Spacing ;
+                rdfs:label "has abnormal" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#hasAppearance
+ns1:hasAppearance rdf:type owl:ObjectProperty ;
+                  rdfs:domain ns1:Crease ,
+                              ns1:Inclusion ,
+                              ns1:OilSpot ,
+                              ns1:RolledPit ,
+                              ns1:SilkSpot ,
+                              ns1:WaistFolding ;
+                  rdfs:range ns1:BlockIrregularDistribution ,
+                             ns1:Bulges ,
+                             ns1:FishScaleShape ,
+                             ns1:ObviousFolds ,
+                             ns1:Pits ,
+                             ns1:Plaque ,
+                             ns1:Product ,
+                             ns1:SmallSpots ,
+                             ns1:StripShape ,
+                             ns1:VerticalTransverseFold ,
+                             ns1:Wrinkles ;
+                  rdfs:label "has appearance" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isAccompaniedBy
+ns1:isAccompaniedBy rdf:type owl:ObjectProperty ;
+                    rdfs:domain ns1:Inclusion ;
+                    rdfs:range ns1:RoughPockmarkedSurfaces ;
+                    rdfs:label "is accompanied by" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isCausedBy
+ns1:isCausedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain ns1:Contamination ,
+                           ns1:Crease ,
+                           ns1:CrescentGap ,
+                           ns1:OilSpot ,
+                           ns1:Punching ,
+                           ns1:RolledPit ,
+                           ns1:SilkSpot ,
+                           ns1:WaistFolding ;
+               rdfs:range ns1:Contamination ,
+                          ns1:Cutting ,
+                          ns1:LocalDeformation ,
+                          ns1:LocalYield ,
+                          ns1:Low-carbon ,
+                          ns1:MechanicalFailure ,
+                          ns1:MechanicalLubricant ,
+                          ns1:TensionRoll ,
+                          ns1:UnevenPressure ,
+                          ns1:UnevenTemperature ,
+                          ns1:WorkRoll ;
+               rdfs:label "is caused by" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isPartOf
+ns1:isPartOf rdf:type owl:ObjectProperty ;
+             rdfs:domain ns1:Crease ,
+                         ns1:Inclusion ,
+                         ns1:Punctate ,
+                         ns1:RolledPit ,
+                         ns1:WeldLine ;
+             rdfs:range ns1:LowerSurface ,
+                        ns1:RolledPit ,
+                        ns1:SteelPlate ,
+                        ns1:Strip ,
+                        ns1:UpperSurface ;
+             rdfs:label "is part of" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#isProducedBy
+ns1:isProducedBy rdf:type owl:ObjectProperty ;
+                 rdfs:domain ns1:Punching ,
+                             ns1:WaterSpot ;
+                 rdfs:range ns1:Drying ,
+                            ns1:Production ,
+                            ns1:ProductionLine ,
+                            ns1:Strip ;
+                 rdfs:label "is produced by" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#BlockIrregularDistribution
+ns1:BlockIrregularDistribution rdf:type owl:Class ;
+                               rdfs:label "block irregular distribution" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Bulges
+ns1:Bulges rdf:type owl:Class ;
+           rdfs:label "bulges" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Contamination
+ns1:Contamination rdf:type owl:Class ;
+                  rdfs:label "contamination" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Crease
+ns1:Crease rdf:type owl:Class ;
+           rdfs:subClassOf ns1:DefectType ,
+                           ns1:Fold ;
+           rdfs:label "crease" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#CrescentGap
+ns1:CrescentGap rdf:type owl:Class ;
+                rdfs:subClassOf ns1:DefectType ;
+                rdfs:label "crescent gap" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Cutting
+ns1:Cutting rdf:type owl:Class ;
+            rdfs:label "cutting" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Damage
+ns1:Damage rdf:type owl:Class ;
+           rdfs:label "damage" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#DefectType
+ns1:DefectType rdf:type owl:Class ;
+               rdfs:label "defect type" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Deformation
+ns1:Deformation rdf:type owl:Class ;
+                rdfs:label "deformation" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Drying
+ns1:Drying rdf:type owl:Class ;
+           rdfs:label "drying" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#FishScaleShape
+ns1:FishScaleShape rdf:type owl:Class ;
+                   rdfs:label "fish scale shape" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Fold
+ns1:Fold rdf:type owl:Class ;
+         rdfs:label "fold" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Inclusion
+ns1:Inclusion rdf:type owl:Class ;
+              rdfs:subClassOf ns1:DefectType ;
+              rdfs:label "inclusion" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LocalDeformation
+ns1:LocalDeformation rdf:type owl:Class ;
+                     rdfs:label "local deformation" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LocalYield
+ns1:LocalYield rdf:type owl:Class ;
+               rdfs:label "local yield" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Low-carbon
+ns1:Low-carbon rdf:type owl:Class ;
+               rdfs:label "low-carbon" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#LowerSurface
+ns1:LowerSurface rdf:type owl:Class ;
+                 rdfs:label "lower surface" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MechanicalFailure
+ns1:MechanicalFailure rdf:type owl:Class ;
+                      rdfs:label "mechanical failure" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MechanicalLubricant
+ns1:MechanicalLubricant rdf:type owl:Class ;
+                        rdfs:label "mechanical lubricant" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#MetalSurface
+ns1:MetalSurface rdf:type owl:Class ;
+                 rdfs:label "metal surface" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#ObviousFolds
+ns1:ObviousFolds rdf:type owl:Class ;
+                 rdfs:label "obvious folds" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#OilSpot
+ns1:OilSpot rdf:type owl:Class ;
+            rdfs:subClassOf ns1:DefectType ,
+                            ns1:Spots ;
+            rdfs:label "oil spot" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Pits
+ns1:Pits rdf:type owl:Class ;
+         rdfs:subClassOf ns1:Bulges ;
+         rdfs:label "pits" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Plaque
+ns1:Plaque rdf:type owl:Class ;
+           rdfs:label "plaque" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Pressure
+ns1:Pressure rdf:type owl:Class ;
+             rdfs:label "pressure" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Product
+ns1:Product rdf:type owl:Class ;
+            rdfs:label "product" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Production
+ns1:Production rdf:type owl:Class ;
+               rdfs:label "production" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#ProductionLine
+ns1:ProductionLine rdf:type owl:Class ;
+                   rdfs:label "production line" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Punching
+ns1:Punching rdf:type owl:Class ;
+             rdfs:label "punching" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Punctate
+ns1:Punctate rdf:type owl:Class ;
+             rdfs:label "punctate" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RolledPit
+ns1:RolledPit rdf:type owl:Class ;
+              rdfs:subClassOf ns1:DefectType ;
+              rdfs:label "rolled pit" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Roller
+ns1:Roller rdf:type owl:Class ;
+           rdfs:label "roller" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#RoughPockmarkedSurfaces
+ns1:RoughPockmarkedSurfaces rdf:type owl:Class ;
+                            rdfs:label "rough pockmarked surfaces" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SilkSpot
+ns1:SilkSpot rdf:type owl:Class ;
+             rdfs:subClassOf ns1:DefectType ;
+             rdfs:label "silk spot" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SmallSpots
+ns1:SmallSpots rdf:type owl:Class ;
+               rdfs:label "small spots" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Spacing
+ns1:Spacing rdf:type owl:Class ;
+            rdfs:label "spacing" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Spots
+ns1:Spots rdf:type owl:Class ;
+          rdfs:label "spots" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SteelPlate
+ns1:SteelPlate rdf:type owl:Class ;
+               rdfs:label "steel plate" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#SteelStripSurface
+ns1:SteelStripSurface rdf:type owl:Class ;
+                      rdfs:label "steel strip surface" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Strip
+ns1:Strip rdf:type owl:Class ;
+          rdfs:label "strip" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#StripShape
+ns1:StripShape rdf:type owl:Class ;
+               rdfs:label "strip shape" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#TensionRoll
+ns1:TensionRoll rdf:type owl:Class ;
+                rdfs:subClassOf ns1:Roller ;
+                rdfs:label "tension roll" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UncoilingProcess
+ns1:UncoilingProcess rdf:type owl:Class ;
+                     rdfs:label "uncoiling process" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UnevenPressure
+ns1:UnevenPressure rdf:type owl:Class ;
+                   rdfs:label "uneven pressure" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UnevenTemperature
+ns1:UnevenTemperature rdf:type owl:Class ;
+                      rdfs:label "uneven temperature" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#UpperSurface
+ns1:UpperSurface rdf:type owl:Class ;
+                 rdfs:label "upper surface" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#VerticalTransverseFold
+ns1:VerticalTransverseFold rdf:type owl:Class ;
+                           rdfs:label "vertical transverse fold" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WaistFolding
+ns1:WaistFolding rdf:type owl:Class ;
+                 rdfs:subClassOf ns1:DefectType ,
+                                 ns1:Fold ;
+                 rdfs:label "waist folding" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WaterSpot
+ns1:WaterSpot rdf:type owl:Class ;
+              rdfs:subClassOf ns1:DefectType ,
+                              ns1:Spots ;
+              rdfs:label "water spot" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WeldLine
+ns1:WeldLine rdf:type owl:Class ;
+             rdfs:label "weld line" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WeldingLine
+ns1:WeldingLine rdf:type owl:Class ;
+                rdfs:label "welding line" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#WorkRoll
+ns1:WorkRoll rdf:type owl:Class ;
+             rdfs:subClassOf ns1:Roller ;
+             rdfs:label "work roll" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#Wrinkles
+ns1:Wrinkles rdf:type owl:Class ;
+             rdfs:label "wrinkles" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_blockIrregularDistribution
+ns1:_blockIrregularDistribution rdf:type owl:NamedIndividual ,
+                                         ns1:BlockIrregularDistribution ;
+                                rdfs:label "block irregular distribution" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_bulges
+ns1:_bulges rdf:type owl:NamedIndividual ,
+                     ns1:Bulges ;
+            rdfs:label "bulges" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_crease
+ns1:_crease rdf:type owl:NamedIndividual ,
+                     ns1:Crease ;
+            rdfs:label "crease" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_crescentGap
+ns1:_crescentGap rdf:type owl:NamedIndividual ,
+                          ns1:CrescentGap ;
+                 rdfs:label "crescent gap" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_cutting
+ns1:_cutting rdf:type owl:NamedIndividual ,
+                      ns1:Cutting ;
+             rdfs:label "cutting" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_damage
+ns1:_damage rdf:type owl:NamedIndividual ,
+                     ns1:Damage ;
+            rdfs:label "damage" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_defectType
+ns1:_defectType rdf:type owl:NamedIndividual ,
+                         ns1:DefectType ;
+                rdfs:label "defect type" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_deformation
+ns1:_deformation rdf:type owl:NamedIndividual ,
+                          ns1:Deformation ;
+                 rdfs:label "deformation" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_drying
+ns1:_drying rdf:type owl:NamedIndividual ,
+                     ns1:Drying ;
+            rdfs:label "drying" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_fishScaleShape
+ns1:_fishScaleShape rdf:type owl:NamedIndividual ,
+                             ns1:FishScaleShape ;
+                    rdfs:label "fish scale shape" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_fold
+ns1:_fold rdf:type owl:NamedIndividual ,
+                   ns1:Fold ;
+          rdfs:label "fold" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_inclusion
+ns1:_inclusion rdf:type owl:NamedIndividual ,
+                        ns1:Inclusion ;
+               rdfs:label "inclusion" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_low-carbon
+ns1:_low-carbon rdf:type owl:NamedIndividual ,
+                         ns1:Low-carbon ;
+                rdfs:label "low-carbon" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_mechanicalFailure
+ns1:_mechanicalFailure rdf:type owl:NamedIndividual ,
+                                ns1:MechanicalFailure ;
+                       rdfs:label "mechanical failure" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_mechanicalLubricant
+ns1:_mechanicalLubricant rdf:type owl:NamedIndividual ,
+                                  ns1:MechanicalLubricant ;
+                         rdfs:label "mechanical lubricant" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_metalSurface
+ns1:_metalSurface rdf:type owl:NamedIndividual ,
+                           ns1:MetalSurface ;
+                  rdfs:label "metal surface" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_oilSpot
+ns1:_oilSpot rdf:type owl:NamedIndividual ,
+                      ns1:OilSpot ;
+             rdfs:label "oil spot" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_pits
+ns1:_pits rdf:type owl:NamedIndividual ,
+                   ns1:Pits ;
+          rdfs:label "pits" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_plaque
+ns1:_plaque rdf:type owl:NamedIndividual ,
+                     ns1:Plaque ;
+            rdfs:label "plaque" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_pressure
+ns1:_pressure rdf:type owl:NamedIndividual ,
+                       ns1:Pressure ;
+              rdfs:label "pressure" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_punching
+ns1:_punching rdf:type owl:NamedIndividual ,
+                       ns1:Punching ;
+              rdfs:label "punching" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_rolledPit
+ns1:_rolledPit rdf:type owl:NamedIndividual ,
+                        ns1:RolledPit ;
+               rdfs:label "rolled pit" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_roller
+ns1:_roller rdf:type owl:NamedIndividual ,
+                     ns1:Roller ;
+            rdfs:label "roller" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_silkSpot
+ns1:_silkSpot rdf:type owl:NamedIndividual ,
+                       ns1:SilkSpot ;
+              rdfs:label "silk spot" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_spots
+ns1:_spots rdf:type owl:NamedIndividual ,
+                    ns1:Spots ;
+           rdfs:label "spots" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_steelPlate
+ns1:_steelPlate rdf:type owl:NamedIndividual ,
+                         ns1:SteelPlate ;
+                rdfs:label "steel plate" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_steelStripSurface
+ns1:_steelStripSurface rdf:type owl:NamedIndividual ,
+                                ns1:SteelStripSurface ;
+                       rdfs:label "steel strip surface" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_stripSurface
+ns1:_stripSurface rdf:type owl:NamedIndividual ,
+                           ns1:SteelStripSurface ;
+                  rdfs:label "strip surface" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_tensionRoll
+ns1:_tensionRoll rdf:type owl:NamedIndividual ,
+                          ns1:TensionRoll ;
+                 rdfs:label "tension roll" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_uncoilingProcess
+ns1:_uncoilingProcess rdf:type owl:NamedIndividual ,
+                               ns1:UncoilingProcess ;
+                      rdfs:label "uncoiling process" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_waistFolding
+ns1:_waistFolding rdf:type owl:NamedIndividual ,
+                           ns1:WaistFolding ;
+                  rdfs:label "waist folding" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_waterSpot
+ns1:_waterSpot rdf:type owl:NamedIndividual ,
+                        ns1:WaterSpot ;
+               rdfs:label "water spot" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_weldLine
+ns1:_weldLine rdf:type owl:NamedIndividual ,
+                       ns1:WeldingLine ;
+              rdfs:label "weld line" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_weldingLine
+ns1:_weldingLine rdf:type owl:NamedIndividual ,
+                          ns1:WeldingLine ;
+                 rdfs:label "welding line" .
+
+
+###  https://github.com/wikit-ai/olaf-llm-eswc2024/o/example#_workRoll
+ns1:_workRoll rdf:type owl:NamedIndividual ,
+                       ns1:WorkRoll ;
+              rdfs:label "work roll" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
