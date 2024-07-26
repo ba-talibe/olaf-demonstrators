@@ -40,7 +40,7 @@ But The relation equivalence associated with a no generalised domain and range s
 - kr_relations_to_anonymous_some_equivalent
 - concept_lrs_to_owl_individuals
 
-# defect_onto_graph_distinct_classes.ttl
+# defect_onto_kr_ttl_graph_equi_dis.ttl
 This pipeline is a improved version of the previous one. In contrast, we maked all classes distinct during axiomatisation.
 This approach raise inconsistency ontology error during reasoning.Because the equivalence between relation and the classes distinction created conflicts.
 
