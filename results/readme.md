@@ -1,3 +1,6 @@
+# defect_onto_ground_truth.ttl 
+This is a ground-truth ontology built manualy.
+
 # defect_onto_kr_ttl_graph.ttl 
 We used same axiomation functions as olaf-llm-eswc2024.
 The hierarchisation is not satisfactory.
